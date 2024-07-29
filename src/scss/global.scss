@@ -1,0 +1,59 @@
+/* -------- GLOBAL -------- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $fontPrimary;
+}
+
+*,
+*::after,
+*::before {
+    transition: $quickTransition;
+}
+
+.container {
+    max-width: calc($conteinerWidth + 2 * $containerPadding);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $containerPadding;
+
+}
+
+
+html,
+body {
+    max-width: 100vw;
+    min-height: 100vh;
+    overflow-x: clip;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main {
+    
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+}
+
+.lock {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}

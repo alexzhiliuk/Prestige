@@ -1,0 +1,35 @@
+// Container
+$conteinerWidth: 1152 + px;
+$containerPadding: 16 + px;
+
+// Breakpoints
+$breakpoint1400: 1399.98 + px;
+$breakpoint1200: 1199.98 + px;
+$breakpoint1024: 1023.98 + px;
+$breakpoint992: 991.98 + px;
+$breakpoint768: 767.98 + px;
+$breakpoint576: 575.98 + px;
+$breakpoint480: 479.98 + px;
+
+// Colors
+$colorPrimary: #0273DF;
+$colorWhite: #FFFFFF;
+$colorTextDefault: #00172D;
+$colorTextLight: #808B96;
+$colorTextSuperLight: #BFC5CA;
+$colorBorder: #E0E0E0;
+$colorFooterBg: #004D97;
+
+
+// Fonts
+$fontPrimary: "Open Sans";
+
+// Layers
+$headerLayer: 9;
+$popupLayer: 10;
+
+// Burger
+$burgerBreakpoint: $breakpoint992;
+
+// Transitions
+$quickTransition: all 120ms ease-out;

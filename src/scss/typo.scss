@@ -1,0 +1,71 @@
+@mixin h1 {
+    font-family: $fontPrimary;
+    font-weight: 600;
+    font-size: 56px;
+}
+@mixin h2 {
+    font-family: $fontPrimary;
+    font-weight: 600;
+    font-size: 46px;
+}
+@mixin h3 {
+    font-family: $fontPrimary;
+    font-weight: 600;
+    font-size: 38px;
+}
+@mixin h4 {
+    font-family: $fontPrimary;
+    font-weight: 600;
+    font-size: 30px;
+}
+@mixin h5 {
+    font-family: $fontPrimary;
+    font-weight: 600;
+    font-size: 24px;
+}
+@mixin h6 {
+    font-family: $fontPrimary;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.h1 {
+    @include h1;
+}
+.h2 {
+    @include h2;
+}
+.h3 {
+    @include h3;
+}
+.h4 {
+    @include h4;
+}
+.h5 {
+    @include h5;
+}
+.h6 {
+    @include h6;
+}
+
+@mixin fontDefault {
+    font-family: $fontPrimary;
+    font-weight: 400;
+    font-size: 16px;
+}
+@mixin font20 {
+    font-family: $fontPrimary;
+    font-weight: 400;
+    font-size: 20px;
+}
+@mixin font14 {
+    font-family: $fontPrimary;
+    font-weight: 400;
+    font-size: 14px;
+}
+@mixin fontSubheading {
+    font-family: $fontPrimary;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.4;
+}
