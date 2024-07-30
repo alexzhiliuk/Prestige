@@ -18,6 +18,11 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.min.css">
 
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
     <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
@@ -141,6 +146,80 @@
 </header>
 
         <main>
+
+            <!-- Hero -->
+            <section class="hero hero_slider container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide hero__slide">
+            <h1 class="hero__title">
+                <span>ИТ услуги</span> <br>
+                с человеческим лицом
+            </h1>
+            <p class="hero__text">
+                Создаем  удобные, надежные, <br>незаметные IT системы, <br>ориентированные на ваш бизнес.
+            </p>
+            <a href="#" class="hero__btn btn btn_black">подробнее</a>
+        
+            <div class="hero__img">
+                <img class="hero__img-person" src="img/hero/slider/slide-1.png" alt="">
+                <img class="hero__img-border" src="img/hero/slider/border.png" alt="">
+            </div>
+        </div>
+        <div class="swiper-slide hero__slide">
+            <h2 class="hero__title">
+                <span>Сервисы</span> <br>
+                для 1С
+            </h2>
+            <p class="hero__text">
+                Бухгалтер + IT = Любовь)
+            </p>
+            <a href="#" class="hero__btn btn btn_black">подробнее</a>
+        
+            <div class="hero__img">
+                <img class="hero__img-person" src="img/hero/slider/slide-2.png" alt="">
+                <img class="hero__img-border" src="img/hero/slider/border.png" alt="">
+            </div>
+        </div>
+        <div class="swiper-slide hero__slide">
+            <h2 class="hero__title">
+                <span>Абонентское обслуживание</span> <br>
+                Мы рядом 24/7
+            </h2>
+            <p class="hero__text">
+                1С сопровождение <br>
+                и сервис кассового оборудования.
+            </p>
+            <a href="#" class="hero__btn btn btn_black">подробнее</a>
+        
+            <div class="hero__img">
+                <img class="hero__img-person" src="img/hero/slider/slide-3.png" alt="">
+                <img class="hero__img-border" src="img/hero/slider/border.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="hero__numbers">
+        
+    </div>
+</section>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".hero_slider", {
+      spaceBetween: 30,
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true,
+      },
+
+      pagination: {
+        el: ".hero__numbers",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="hero__number ' + className + '">' + (index + 1) + '</span>';
+        },
+      },
+    });
+  </script>
             
         </main>
 

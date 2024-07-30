@@ -4,6 +4,7 @@
     border-bottom: 1px solid $colorBorder;
     position: relative;
     z-index: $headerLayer;
+    background: $colorWhite;
 
     // .header__inner
     &__inner {

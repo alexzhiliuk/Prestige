@@ -1,0 +1,21 @@
+.btn {
+
+    @include font14;
+    font-weight: 600;
+    color: $colorWhite;
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 18px 56px;
+    background: $colorPrimary;
+    max-width: max-content;
+
+    &_black {
+        background: $colorWhite;
+        color: $colorTextDefault;
+        border: 1px solid $colorTextDefault;
+    }
+}
