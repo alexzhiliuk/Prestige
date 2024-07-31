@@ -1,3 +1,87 @@
+@font-face {
+  font-family: OpenSans_Condensed;
+  font-display: swap;
+  src: url("../fonts/OpenSans_Condensed-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: OpenSans_Condensed;
+  font-display: swap;
+  src: url("../fonts/OpenSans_Condensed-ExtraBoldItalic.woff2") format("woff2");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: OpenSans_Condensed;
+  font-display: swap;
+  src: url("../fonts/OpenSans_Condensed-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: OpenSans_Condensed;
+  font-display: swap;
+  src: url("../fonts/OpenSans_Condensed-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: OpenSans_Condensed;
+  font-display: swap;
+  src: url("../fonts/OpenSans_Condensed-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: OpenSans_Condensed;
+  font-display: swap;
+  src: url("../fonts/OpenSans_Condensed-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: OpenSans_Condensed;
+  font-display: swap;
+  src: url("../fonts/OpenSans_Condensed-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: OpenSans_Condensed;
+  font-display: swap;
+  src: url("../fonts/OpenSans_Condensed-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: OpenSans_Condensed;
+  font-display: swap;
+  src: url("../fonts/OpenSans_Condensed-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: OpenSans_Condensed;
+  font-display: swap;
+  src: url("../fonts/OpenSans_Condensed-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: OpenSans_Condensed;
+  font-display: swap;
+  src: url("../fonts/OpenSans_Condensed-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: OpenSans_Condensed;
+  font-display: swap;
+  src: url("../fonts/OpenSans_Condensed-SemiBoldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -666,7 +750,7 @@ button {
   font-family: "Open Sans";
   font-weight: 400;
   font-size: 16px;
-  font-family: "Open Sans Condensed";
+  font-family: OpenSans_Condensed;
   font-weight: 700;
   color: #00172D;
   line-height: 1.1;
@@ -681,7 +765,7 @@ button {
   font-family: "Open Sans";
   font-weight: 400;
   font-size: 16px;
-  font-family: "Open Sans Condensed";
+  font-family: OpenSans_Condensed;
   font-weight: 400;
   color: #00172D;
   line-height: 1.1;

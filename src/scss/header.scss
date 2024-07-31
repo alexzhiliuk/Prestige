@@ -280,7 +280,7 @@
     // .dropmenu__title
     &__title {
         @include fontDefault;
-        font-family: "Open Sans Condensed";
+        font-family: OpenSans_Condensed;
         font-weight: 700;
         color: $colorTextDefault;
         line-height: 1.1;
@@ -296,7 +296,7 @@
 
         a {
             @include fontDefault;
-            font-family: "Open Sans Condensed";
+            font-family: OpenSans_Condensed;
             font-weight: 400;
             color: $colorTextDefault;
             line-height: 1.1;
