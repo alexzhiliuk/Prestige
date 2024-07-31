@@ -1,10 +1,19 @@
 .header {
 
     height: 64px;
+    width: 100%;
     border-bottom: 1px solid $colorBorder;
     position: relative;
     z-index: $headerLayer;
     background: $colorWhite;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    &_scrolled {
+        box-shadow: 0px 4px 20px rgba(144, 153, 193, 0.3);
+    }
 
     // .header__inner
     &__inner {

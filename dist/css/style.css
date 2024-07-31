@@ -481,6 +481,10 @@ body {
   justify-content: space-between;
 }
 
+main {
+  padding-top: 64px;
+}
+
 ul, ol {
   list-style-type: none;
 }
@@ -529,10 +533,17 @@ button {
 
 .header {
   height: 64px;
+  width: 100%;
   border-bottom: 1px solid #E0E0E0;
   position: relative;
   z-index: 9;
   background: #FFFFFF;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.header_scrolled {
+  box-shadow: 0px 4px 20px rgba(144, 153, 193, 0.3);
 }
 .header__inner {
   display: flex;
