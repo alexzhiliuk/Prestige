@@ -1,7 +1,7 @@
 .section {
 
-    padding-top: 128px;
-    padding-bottom: 128px;
+    margin-top: clamp(64px, 12vw, 128px);
+    margin-bottom: clamp(64px, 12vw, 128px);
 
     // .section__header
     &__header {
