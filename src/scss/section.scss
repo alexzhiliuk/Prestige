@@ -1,0 +1,39 @@
+.section {
+
+    padding-top: 128px;
+    padding-bottom: 128px;
+
+    // .section__header
+    &__header {
+    }
+
+    // .section__title
+    &__title {
+        text-align: center;
+    }
+
+    // .section__body
+    &__body {
+        margin-top: 32px;
+        
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        &_centered {
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    // .section__box
+    &__box {
+        @include fontSubheading;
+        text-align: center;
+    }
+
+    // .section__text
+    &__text {
+        @include fontDefault;
+    }
+}

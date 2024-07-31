@@ -1,7 +1,7 @@
 @mixin h1 {
     font-family: $fontPrimary;
     font-weight: 600;
-    font-size: 56px;
+    font-size: clamp(24px, 5.6vw, 56px);
 }
 @mixin h2 {
     font-family: $fontPrimary;
@@ -16,7 +16,7 @@
 @mixin h4 {
     font-family: $fontPrimary;
     font-weight: 600;
-    font-size: 30px;
+    font-size: clamp(24px, 3vw, 30px);
 }
 @mixin h5 {
     font-family: $fontPrimary;
@@ -66,6 +66,6 @@
 @mixin fontSubheading {
     font-family: $fontPrimary;
     font-weight: 400;
-    font-size: 24px;
+    font-size: clamp(18px, 2.4vw, 24px);
     line-height: 1.4;
 }

@@ -58,3 +58,12 @@ button {
     overflow-y: hidden;
     overflow-x: hidden;
 }
+
+
+.title {
+    text-transform: uppercase;
+    
+    span {
+        color: $colorPrimary;
+    }
+}

@@ -412,7 +412,7 @@ template {
 .h1 {
   font-family: "Open Sans";
   font-weight: 600;
-  font-size: 56px;
+  font-size: clamp(24px, 5.6vw, 56px);
 }
 
 .h2 {
@@ -430,7 +430,7 @@ template {
 .h4 {
   font-family: "Open Sans";
   font-weight: 600;
-  font-size: 30px;
+  font-size: clamp(24px, 3vw, 30px);
 }
 
 .h5 {
@@ -498,6 +498,13 @@ button {
 .lock {
   overflow-y: hidden;
   overflow-x: hidden;
+}
+
+.title {
+  text-transform: uppercase;
+}
+.title span {
+  color: #0273DF;
 }
 
 .btn {
@@ -952,6 +959,145 @@ button {
   opacity: 1;
   width: unset !important;
   height: unset !important;
+}
+
+.section {
+  padding-top: 128px;
+  padding-bottom: 128px;
+}
+.section__title {
+  text-align: center;
+}
+.section__body {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.section__body_centered {
+  align-items: center;
+  text-align: center;
+}
+.section__box {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: clamp(18px, 2.4vw, 24px);
+  line-height: 1.4;
+  text-align: center;
+}
+.section__text {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.who__box {
+  max-width: 948px;
+  width: 100%;
+}
+.who__text {
+  max-width: 900px;
+  width: 100%;
+}
+.who__abilities-wrapper {
+  margin-top: 96px;
+  width: 100%;
+}
+.who__abilities {
+  margin-top: 92px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(20px, 2vw, 32px);
+  row-gap: 96px;
+}
+.box {
+  padding: 24px;
+  position: relative;
+}
+.box__left {
+  position: absolute;
+  width: 24px;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.box__left::before {
+  content: url(../img/box/left-top.svg);
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.box__left::after {
+  content: url(../img/box/left-bottom.svg);
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.box__right {
+  position: absolute;
+  width: 24px;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+.box__right::before {
+  content: url(../img/box/right-top.svg);
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.box__right::after {
+  content: url(../img/box/right-bottom.svg);
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.ability-card {
+  padding: 120px 32px 44px;
+  background: #FFFFFF;
+  flex: 0 0 calc(25% - clamp(20px, 2vw, 32px) * 3 / 4);
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.ability-card:hover {
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+.ability-card:hover .ability-card__title {
+  color: #0273DF;
+}
+@media screen and (max-width: 991.98px) {
+  .ability-card {
+    flex: 0 0 calc(50% - clamp(20px, 2vw, 32px) * 2 / 3);
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .ability-card {
+    flex: 0 0 100%;
+  }
+}
+.ability-card__img {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  translate: -50% -37%;
+  width: 55%;
+  max-width: 147px;
+}
+.ability-card__img img {
+  width: 100%;
+}
+.ability-card__title {
+  text-transform: uppercase;
+  text-align: left;
 }
 
 @font-face {

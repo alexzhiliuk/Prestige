@@ -1,0 +1,49 @@
+.ability-card {
+
+    padding: 120px 32px 44px;
+    background: $colorWhite;
+
+    flex: 0 0 calc(25% - clamp(20px, 2vw, 32px) * 3 / 4);
+
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    &:hover {
+
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+        
+        .ability-card__title {
+            color: $colorPrimary;
+        }
+
+    }
+
+    @media screen and (max-width: $breakpoint992) {
+        flex: 0 0 calc(50% - clamp(20px, 2vw, 32px) * 2 / 3);
+    }
+    @media screen and (max-width: $breakpoint576) {
+        flex: 0 0 100%;
+    }
+
+    // .ability-card__img
+    &__img {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        translate: -50% -37%;
+
+        width: 55%;
+        max-width: 147px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    // .ability-card__title
+    &__title {
+        text-transform: uppercase;
+        text-align: left;
+
+    }
+}

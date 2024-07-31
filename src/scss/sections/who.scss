@@ -1,0 +1,38 @@
+.who {
+
+    // .who__box
+    &__box {        
+        max-width: 948px;
+        width: 100%;
+    }
+
+    // .who__text
+    &__text {
+        max-width: 900px;
+        width: 100%;
+    }
+
+    // .who__abilities-wrapper
+    &__abilities-wrapper {
+        margin-top: 96px;
+        width: 100%;
+    }
+
+    // .who__abilities
+    &__abilities {
+        margin-top: 92px;
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: clamp(20px, 2vw, 32px);
+        row-gap: 96px;
+
+        @media screen and (max-width: $breakpoint992) {
+            
+        }
+    }
+
+    // .who__ability
+    &__ability {
+    }
+}
