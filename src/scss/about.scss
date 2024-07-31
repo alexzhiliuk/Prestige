@@ -1,0 +1,115 @@
+.about {
+
+    display: flex;
+    flex-direction: column;
+    gap: clamp(100px, 25vw, 256px);
+
+    @media screen and (max-width: $breakpoint992) {
+        gap: 100px;
+    }
+    @media screen and (max-width: $breakpoint768) {
+        gap: 32px;
+    }
+
+    // .about__item
+    &__item {
+        &:first-child {
+            margin-top: clamp(100px, 25vw, 256px);
+
+            @media screen and (max-width: $breakpoint992) {
+                margin-top: 100px;
+            }
+            @media screen and (max-width: $breakpoint768) {
+                margin-top: 0;
+            }
+        }
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+
+            .about__img {
+                right: min(600px, 50%);
+                left: unset;
+
+                @media screen and (max-width: $breakpoint768) {
+                    right: unset;
+                    display: flex;
+                    justify-content: flex-end;
+                }
+            }
+
+            @media screen and (max-width: $breakpoint768) {
+                flex-direction: column;
+            }
+        }
+
+        display: flex;
+        align-items: center;
+
+        position: relative;
+        padding: 64px 0;
+
+        @media screen and (max-width: $breakpoint768) {
+            flex-direction: column;
+            padding: 0;
+        }
+
+    }
+
+    // .about__info
+    &__info {
+        flex: 0 0 50%;
+        max-width: 600px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @include font20;
+    }
+
+    // .about__img
+    &__img {
+        position: absolute;
+        left: min(600px, 50%);
+        top: 50%;
+        translate: 0 -55%;
+        width: clamp(600px, 83vw, 832px);
+        aspect-ratio: 832 / 805;
+
+        img {
+            width: 100%;
+        }
+
+        @media screen and (max-width: $breakpoint768) {
+            position: static;
+            translate: unset;
+            width: 100%;
+
+            img {
+                position: relative;
+                width: 130%;
+            }
+        }
+    }
+}
+
+.ol {
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    counter-reset: item; 
+
+    li {
+        display: flex;
+        gap: 8px;
+        &::before {
+            content: counter(item) ". ";
+            counter-increment: item;
+            color: $colorPrimary;
+            font-weight: 700;
+        }
+    }
+}
