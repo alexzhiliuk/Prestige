@@ -1,17 +1,12 @@
-.text {
-    text-align: left;
-    width: 100%;
-
-    .ul, .ol {
-        margin-top: 16px;
-    }
-}
-
 .ul {
     line-height: 1.2;
     display: flex;
     flex-direction: column;
     gap: 12px;
+
+    
+    @include font20;
+    
 
     li {
         display: flex;
@@ -20,8 +15,8 @@
         &::before {
             content: '';
             margin-top: .4375em;
-            width: 8px;
-            height: 8px;
+            width: .5em;
+            height: .5em;
             flex-shrink: 0;
             border-radius: 50%;
             background: $colorPrimary;
@@ -37,6 +32,8 @@
 
     counter-reset: item; 
 
+    @include font20;
+
     li {
         display: flex;
         gap: 8px;
@@ -47,4 +44,88 @@
             font-weight: 700;
         }
     }
+}
+
+.text {
+    text-align: left;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+
+    p {
+        @include font20;
+        line-height: 1.35;
+
+        span {
+            color: $colorPrimary;
+        }
+
+        b, strong {
+            font-weight: 600;
+        }
+    }
+
+    h2 {
+        @extend .h2;
+        margin-top: 2em;
+        text-transform: uppercase;
+
+        span {
+            color: $colorPrimary;
+        }
+    }
+    h3 {
+        @extend .h3;
+        margin-top: 2em;
+        text-transform: uppercase;
+
+        span {
+            color: $colorPrimary;
+        }
+    }
+    h4 {
+        @extend .h4;
+        margin-top: 2em;
+        text-transform: uppercase;
+
+        span {
+            color: $colorPrimary;
+        }
+    }
+    h5 {
+        @extend .h5;
+        margin-top: 2em;
+        text-transform: uppercase;
+
+        span {
+            color: $colorPrimary;
+        }
+    }
+    h6 {
+        @extend .h6;
+        margin-top: 2em;
+        text-transform: uppercase;
+
+        span {
+            color: $colorPrimary;
+        }
+    }
+    
+    h2, h3, h4, h5, h6 {
+        &:first-child {
+            margin-top: .5em;
+        }
+    }
+
+    ol {
+        @extend .ol;
+    }
+
+    ul {
+        @extend .ul;
+    }
+
 }

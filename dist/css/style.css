@@ -415,31 +415,31 @@ template {
   font-size: clamp(24px, 5.6vw, 56px);
 }
 
-.h2 {
+.h2, .text h2 {
   font-family: "Open Sans";
   font-weight: 600;
   font-size: 46px;
 }
 
-.h3 {
+.h3, .text h3 {
   font-family: "Open Sans";
   font-weight: 600;
   font-size: 38px;
 }
 
-.h4 {
+.h4, .text h4 {
   font-family: "Open Sans";
   font-weight: 600;
   font-size: clamp(24px, 3vw, 30px);
 }
 
-.h5 {
+.h5, .text h5 {
   font-family: "Open Sans";
   font-weight: 600;
   font-size: 24px;
 }
 
-.h6 {
+.h6, .text h6 {
   font-family: "Open Sans";
   font-weight: 600;
   font-size: 16px;
@@ -934,52 +934,107 @@ button {
   color: #FFFFFF;
 }
 
-.text {
-  text-align: left;
-  width: 100%;
-}
-.text .ul, .text .ol {
-  margin-top: 16px;
-}
-
-.ul {
+.ul, .text ul {
   line-height: 1.2;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: clamp(18px, 2vw, 20px);
 }
-.ul li {
+.ul li, .text ul li {
   display: flex;
   gap: 8px;
 }
-.ul li::before {
+.ul li::before, .text ul li::before {
   content: "";
   margin-top: 0.4375em;
-  width: 8px;
-  height: 8px;
+  width: 0.5em;
+  height: 0.5em;
   flex-shrink: 0;
   border-radius: 50%;
   background: #0273DF;
 }
 
-.ol {
+.ol, .text ol {
   line-height: 1.2;
   display: flex;
   flex-direction: column;
   gap: 12px;
   counter-reset: item;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: clamp(18px, 2vw, 20px);
 }
-.ol li {
+.ol li, .text ol li {
   display: flex;
   gap: 8px;
 }
-.ol li::before {
+.ol li::before, .text ol li::before {
   content: counter(item) ". ";
   counter-increment: item;
   color: #0273DF;
   font-weight: 700;
 }
 
+.text {
+  text-align: left;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.text p {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: clamp(18px, 2vw, 20px);
+  line-height: 1.35;
+}
+.text p span {
+  color: #0273DF;
+}
+.text p b, .text p strong {
+  font-weight: 600;
+}
+.text h2 {
+  margin-top: 2em;
+  text-transform: uppercase;
+}
+.text h2 span {
+  color: #0273DF;
+}
+.text h3 {
+  margin-top: 2em;
+  text-transform: uppercase;
+}
+.text h3 span {
+  color: #0273DF;
+}
+.text h4 {
+  margin-top: 2em;
+  text-transform: uppercase;
+}
+.text h4 span {
+  color: #0273DF;
+}
+.text h5 {
+  margin-top: 2em;
+  text-transform: uppercase;
+}
+.text h5 span {
+  color: #0273DF;
+}
+.text h6 {
+  margin-top: 2em;
+  text-transform: uppercase;
+}
+.text h6 span {
+  color: #0273DF;
+}
+.text h2:first-child, .text h3:first-child, .text h4:first-child, .text h5:first-child, .text h6:first-child {
+  margin-top: 0.5em;
+}
 .box {
   padding: 24px;
   position: relative;
