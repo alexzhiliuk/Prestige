@@ -243,6 +243,141 @@
 
     </div>
 </section>
+
+            <!-- Calculator -->
+            <section class="section container">
+    <div class="section__header">
+        <h3 class="title h4">
+            А сколько стоит?
+        </h3>
+    </div>
+    <div class="section__body">
+        
+        <div class="calculator">
+            <div class="calculator__form">
+                <div class="calculator__types">
+                    <div class="calculator__type calculator__type_active" data-calculator-tab="1">Аренда 1с</div>
+                    <div class="calculator__type" data-calculator-tab="2">Фреш</div>
+                </div>
+                <div class="calculator__tab" data-calculator-tab="1">
+                    <div class="calculator__row">
+                        <div class="calculator__label">
+                            Добавьте конфигурации
+                            <div class="calculator__tooltip tooltip">
+                                <div class="tooltip__hint">Выбор конфигурации на платформе «1С:Предприятие».</div>
+                            </div>
+                        </div>
+                        <div class="calculator__configurations">
+                            <div class="calculator__add-configuration">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7 0H5V5H0V7H5V12H7V7H12V5H7V0Z" fill="white"/>
+                                </svg>                                    
+                            </div>
+                            <div class="calculator__configuration">
+                                1С:Бухгалтерия ПРОФ
+                                <svg class="calculator__remove-configuration" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4351 1.4644L9.02089 0.0501823L5.48535 3.58572L1.94982 0.0501819L0.535604 1.4644L4.07114 4.99993L0.535604 8.53546L1.94982 9.94968L5.48535 6.41414L9.02089 9.94968L10.4351 8.53546L6.89957 4.99993L10.4351 1.4644Z" fill="#BFC5CA"/>
+                                </svg>                                    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculator__row">
+                        <div class="calculator__label">
+                            Сеансов
+                            <div class="calculator__tooltip tooltip">
+                                <div class="tooltip__hint">Количество пользователей, которые будут одновременно работать в облаке.</div>
+                            </div>
+                        </div>
+                       <div class="calculator__counter counter">
+                            <div class="counter__minus">
+                                <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="12" width="2" height="12" transform="rotate(90 12 0)" fill="#00172D"/>
+                                </svg>                                    
+                            </div>
+                            <input type="number" name="sessions" id="sessionsCount" required value="12" class="counter__input">
+                            <div class="counter__plus">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7 0H5V5H0V7H5V12H7V7H12V5H7V0Z" fill="white"/>
+                                </svg>                                    
+                            </div>
+                       </div>
+                    </div>
+                    <div class="calculator__row">
+                        <div class="calculator__label">
+                            Удаленный рабочий стол
+                            <div class="calculator__tooltip tooltip">
+                                <div class="tooltip__hint">Доступ к режиму конфигурирования 1С посредством подключения через виртуальное рабочее пространство на OS Linux.</div>
+                            </div>
+                        </div>
+                        <div class="toggle">
+                            <input type="radio" hidden id="remoteDesktop">
+                        </div>
+                    </div>
+                    <div class="calculator__row">
+                        <div class="calculator__label">
+                            Период и скидка
+                            <div class="calculator__tooltip tooltip">
+                                <div class="tooltip__hint">Доступ к режиму конфигурирования 1С посредством подключения через виртуальное рабочее пространство на OS Linux.</div>
+                            </div>
+                        </div>
+                        <div class="calculator__periods">
+                            <div class="calculator__period">
+                                1 мес.
+                            </div>
+                            <div class="calculator__period" data-discount="5">
+                                3 мес.
+                            </div>
+                            <div class="calculator__period" data-discount="10">
+                                6 мес.
+                            </div>
+                            <div class="calculator__period calculator__period_active" data-discount="20">
+                                12 мес.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="calculator__result">
+                <div class="calculator__title">Состав услуг</div>
+                <ul class="calculator__services">
+                    <li>Конфигурации 1С: 5 из 47 <span class="calculator__view-all">Смотреть всё</span></li>
+                    <li>До 10 баз 1С с возможностью увеличения</li>
+                    <li>5 Гб на диске для каждого пользователя с возможностью увеличения</li>
+                    <li>3 бесплатные консультации по 1С</li>
+                    <li>Автообновление баз 1С</li>
+                    <li>Резервное копирование баз 1С</li>
+                    <li>Хранение копии баз 14 дней с возможностью увеличения до 4 мес.</li>
+                    <li>Техподдержка 24/7</li>
+                </ul>
+                <div class="calculator__price">
+                    <span>30 900</span> ₽ / мес.
+                </div>
+                <a href="#" class="btn">Попробовать 14 дней бесплатно</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    $(".calculator__period").each(function(i, el) {
+        let discount = $(el).attr("data-discount") 
+        if (discount > 0) {
+            $(el).append(`<br>${discount}% скидка`)
+        }
+    })
+
+    $(".calculator__remove-configuration").click(function() {
+        $(this).parents(".calculator__configuration").remove()
+    })
+
+    $(".toggle").click(function() {
+        $(this).toggleClass("toggle_active")
+        let input = $(this).find("input[type='radio']")[0]
+        input.cheked ? input.checked = false : input.checked = true
+    })
+</script>
             
         </main>
 
