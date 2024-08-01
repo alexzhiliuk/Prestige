@@ -1,0 +1,50 @@
+.text {
+    text-align: left;
+    width: 100%;
+
+    .ul, .ol {
+        margin-top: 16px;
+    }
+}
+
+.ul {
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    li {
+        display: flex;
+        gap: 8px;
+
+        &::before {
+            content: '';
+            margin-top: .4375em;
+            width: 8px;
+            height: 8px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            background: $colorPrimary;
+        }
+    }
+}
+
+.ol {
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    counter-reset: item; 
+
+    li {
+        display: flex;
+        gap: 8px;
+        &::before {
+            content: counter(item) ". ";
+            counter-increment: item;
+            color: $colorPrimary;
+            font-weight: 700;
+        }
+    }
+}

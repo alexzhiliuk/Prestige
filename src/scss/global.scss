@@ -67,3 +67,11 @@ button {
         color: $colorPrimary;
     }
 }
+
+.bg {
+    background: url(../img/hero/bg-desktop.png) center 10% / min(138%, 1770px) auto no-repeat;
+
+    @media screen and (max-width: $breakpoint576) {
+        background: url(../img/hero/bg-mobile.png) center top / 570px auto no-repeat;
+    }
+}

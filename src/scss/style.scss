@@ -8,13 +8,15 @@
 @import "header";
 @import "footer";
 
+@import "text";
+@import "box";
+@import "ability-card";
+@import "about";
+
 @import "hero";
 @import "section";
 @import "./sections/who";
 
-@import "box";
-@import "ability-card";
-@import "about";
 
 @import "../libs/swiper";
 @import "../libs/magnific";

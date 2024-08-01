@@ -3,15 +3,99 @@
     padding-top: clamp(32px, 12.8vw, 128px);
     padding-bottom: 96px;
     position: relative;
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @media screen and (max-width: $breakpoint576) {
         padding-top: 32px;
         padding-bottom: 32px;
     }
 
+    & > * {
+        margin-top: 64px;
+    }
+
+    // .hero__title
+    &__title {
+        text-transform: uppercase;
+
+        span {
+            color: $colorPrimary;
+        }
+    }
+
+    // .hero__text
+    &__text {
+        @include fontSubheading;
+        line-height: 1.4;
+        margin-top: 32px;
+        max-width: 900px;
+    }
+
+    // .hero__numbers
+    &__numbers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+
+        position: absolute !important;
+        top: 128px !important;
+        right: 0 !important;
+        z-index: 1 !important;
+        left: unset !important;
+        width: fit-content !important;
+
+        @media screen and (max-width: $breakpoint1200) {
+            right: 16px !important;
+        }
+
+        @media screen and (max-width: $breakpoint576) {
+            display: none;
+        }
+    }
+
+    // .hero__number
+    &__number {
+
+        @include h5;
+        font-weight: 400;
+        cursor: pointer;
+
+        &.swiper-pagination-bullet-active {
+            font-weight: 700;
+            color: $colorPrimary;
+        }
+    }
+
+    // .hero__box
+    &__box {
+        
+        margin-top: 64px;
+        padding: 64px 32px;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+
+        @media screen and (max-width: $breakpoint992) {
+            padding: 32px 16px;
+        }
+    }
+
     // .hero_slider
     &_slider {
+        text-align: left;
+        & > * {
+            margin-top: 0;
+        }
         .hero {
+            
 
             // .hero__title
             &__title {
@@ -91,74 +175,6 @@
                     right: 0;
                 }
             }
-        }
-    }
-
-    // .hero__title
-    &__title {
-        text-transform: uppercase;
-
-        span {
-            color: $colorPrimary;
-        }
-    }
-
-    // .hero__text
-    &__text {
-    }
-
-    // .hero__btn
-
-    &__btn {
-    }
-
-    // .hero__img
-    &__img {
-    }
-
-    // .hero__img-person
-
-    &__img-person {
-    }
-
-    // .hero__img-border
-
-    &__img-border {
-    }
-
-    // .hero__numbers
-    &__numbers {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
-
-        position: absolute !important;
-        top: 128px !important;
-        right: 0 !important;
-        z-index: 1 !important;
-        left: unset !important;
-        width: fit-content !important;
-
-        @media screen and (max-width: $breakpoint1200) {
-            right: 16px !important;
-        }
-
-        @media screen and (max-width: $breakpoint576) {
-            display: none;
-        }
-    }
-
-    // .hero__number
-    &__number {
-
-        @include h5;
-        font-weight: 400;
-        cursor: pointer;
-
-        &.swiper-pagination-bullet-active {
-            font-weight: 700;
-            color: $colorPrimary;
         }
     }
 

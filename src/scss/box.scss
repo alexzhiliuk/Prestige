@@ -56,4 +56,61 @@
             right: 0;
         }
     }
+
+    // .box_bg
+    &_bg {
+        background: rgba($color: $colorWhite, $alpha: .5);
+    }
+
+
+    .benefits {
+        display: flex;
+        gap: 32px;
+        padding: 32px 0;
+
+        @media screen and (max-width: $breakpoint992) {
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        &__item {
+            flex: 0 0 calc(33.33% - 32px * 2 / 3);
+
+            padding: 32px calc(24px + 32px) 32px 24px;
+            text-align: left;
+            border-right: 1px solid $colorBorder;
+
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            @media screen and (max-width: $breakpoint992) {
+                flex: unset;
+                border-right: none;
+                border-bottom: 1px solid $colorBorder;
+                padding: 0 0 24px;
+            }
+
+            &:last-child {
+                border-right: none;
+                @media screen and (max-width: $breakpoint992) {
+                    border-bottom: none;
+                    padding: 0;
+                }
+            }
+
+        
+        }
+
+        &__title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        &__text {
+            line-height: 1.2;
+            font-size: 18px;
+        }
+
+    }
 }
