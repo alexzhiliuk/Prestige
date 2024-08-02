@@ -75,3 +75,28 @@ button {
         background: url(../img/hero/bg-mobile.png) center top / 570px auto no-repeat;
     }
 }
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $colorTextLight;
+    border-radius: 3px;
+
+    &:checked {
+        background: $colorPrimary;
+        border-color: $colorPrimary;
+        position: relative;
+
+        &::after {
+            content: url(../img/inputs/checkbox.svg);
+            position: absolute;
+            width: 11px;
+            height: 9;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+        }
+    }
+}
