@@ -204,7 +204,7 @@
                     <li>Техподдержка 24/7</li>
                 </ul>
                 <ul class="calculator__services" data-calculator-tab="2" style="display: none;">
-                    <li>Конфигурации 1С: 5 из 47 <span class="calculator__view-all">Смотреть всё</span></li>
+                    <li>Конфигурации 1С: 5 из 47 <span class="calculator__view-all js-packages-open">Смотреть всё</span></li>
                     <li>3 бесплатные консультации по 1С</li>
                     <li>Автообновление баз 1С</li>
                     <li>Резервное копирование баз 1С</li>
@@ -221,7 +221,69 @@
     </div>
 </section>
 
-<section class="configurations" style="display: none;">
+<section class="configurations" data-calculator-tab="1" style="display: none;">
+    <div class="configurations__inner">
+        <div class="configurations__header">
+            <div class="configurations__title">
+                Выбор конфигурации 1С
+                <div class="configurations__close js-configurations-close">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7782 1.63608L14.364 0.221871L8 6.58583L1.63604 0.22187L0.221826 1.63608L6.58579 8.00005L0.221826 14.364L1.63604 15.7782L8 9.41426L14.364 15.7782L15.7782 14.364L9.41421 8.00005L15.7782 1.63608Z" fill="#808B96"/>
+                    </svg>                        
+                </div>
+            </div>
+            <div class="configurations__subtitle">Выберите нужную вам версию программы:</div>
+        </div>
+        <div class="configurations__search">
+            <input type="text" placeholder="Поиск">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="#808B96" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>                
+        </div>
+
+        <div class="configurations__items">
+            <label class="configurations__configuration" data-package="1">
+                <input type="checkbox" name="configuration1">
+                <span>1С:Бухгалтерия ПРОФ</span>
+            </label>
+            <label class="configurations__configuration" data-package="1">
+                <input type="checkbox" name="configuration2">
+                <span>1С:Управление нашей фирмой</span>
+            </label>
+            <label class="configurations__configuration" data-package="2">
+                <input type="checkbox" name="configuration3">
+                <span>1С:Розница</span>
+            </label>
+            <label class="configurations__configuration" data-package="2">
+                <input type="checkbox" name="configuration4">
+                <span>1С:Зарплата и управление персоналом ПРОФ</span>
+            </label>
+            <label class="configurations__configuration" data-package="3">
+                <input type="checkbox" name="configuration5">
+                <span>1С:Зарплата и управление персоналом ПРОФ</span>
+            </label>
+            <label class="configurations__configuration" data-package="3">
+                <input type="checkbox" name="configuration6">
+                <span>1С:Управление торговлей</span>
+            </label>
+            <label class="configurations__configuration" data-package="4">
+                <input type="checkbox" name="configuration7">
+                <span>1С:Розница. Ювелирный магазин</span>
+            </label>
+            <label class="configurations__configuration" data-package="5">
+                <input type="checkbox" name="configuration8">
+                <span>1С:Розница. Магазин одежды и обуви</span>
+            </label>
+        </div>
+
+        <div class="configurations__btns">
+            <a href="javascript:void(0)" class="btn btn_black js-configurations-close">Отмена</a>
+            <a href="javascript:void(0)" class="btn js-configurations-close js-select-configurations">Выбрать</a>
+        </div>
+    </div>
+</section>
+
+<section class="configurations" data-calculator-tab="2" style="display: none;">
     <div class="configurations__inner">
         <div class="configurations__header">
             <div class="configurations__title">
@@ -254,26 +316,6 @@
                 <input type="checkbox" name="configuration3">
                 <span>1С:Розница</span>
             </label>
-            <label class="configurations__configuration">
-                <input type="checkbox" name="configuration4">
-                <span>1С:Зарплата и управление персоналом ПРОФ</span>
-            </label>
-            <label class="configurations__configuration">
-                <input type="checkbox" name="configuration5">
-                <span>1С:Зарплата и управление персоналом ПРОФ</span>
-            </label>
-            <label class="configurations__configuration">
-                <input type="checkbox" name="configuration6">
-                <span>1С:Управление торговлей</span>
-            </label>
-            <label class="configurations__configuration">
-                <input type="checkbox" name="configuration7">
-                <span>1С:Розница. Ювелирный магазин</span>
-            </label>
-            <label class="configurations__configuration">
-                <input type="checkbox" name="configuration8">
-                <span>1С:Розница. Магазин одежды и обуви</span>
-            </label>
         </div>
 
         <div class="configurations__btns">
@@ -283,7 +325,7 @@
     </div>
 </section>
 
-<section class="packages" style="display: none;">
+<section class="packages" data-calculator-tab="1" style="display: none;">
     <div class="packages__inner">
         <div class="packages__header">
             <div class="packages__title">
@@ -389,6 +431,112 @@
     </div>
 </section>
 
+<section class="packages" data-calculator-tab="2" style="display: none;">
+    <div class="packages__inner">
+        <div class="packages__header">
+            <div class="packages__title">
+                Доступные конфигурации
+                <div class="packages__close js-packages-close">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7782 1.63608L14.364 0.221871L8 6.58583L1.63604 0.22187L0.221826 1.63608L6.58579 8.00005L0.221826 14.364L1.63604 15.7782L8 9.41426L14.364 15.7782L15.7782 14.364L9.41421 8.00005L15.7782 1.63608Z" fill="#808B96"/>
+                    </svg>                        
+                </div>
+            </div>
+            <div class="packages__subtitle">Здесь вы можете ознакомиться с доступными пакетами и конфигурациями. Для изменения пакета перейдите в тарифы.</div>
+        </div>
+
+        <div class="packages__body">
+            <div class="packages__items">
+                <div class="packages__item packages__item_active packages__item_selected" data-package-id="1">
+                    <div>
+                        <div class="packages__item-title">Базовый</div>
+                        <div class="packages__item-subtitle">конфигураций: 9</div>
+                    </div>
+                    <div class="packages__item-price">от 1232 ₽ / мес.</div>
+                </div>
+                <div class="packages__item" data-package-id="2">
+                    <div>
+                        <div class="packages__item-title">ПРОФ</div>
+                        <div class="packages__item-subtitle">конфигураций: 9</div>
+                    </div>
+                    <div class="packages__item-price">от 1232 ₽ / мес.</div>
+                </div>
+                <div class="packages__item" data-package-id="3">
+                    <div>
+                        <div class="packages__item-title">КОРП</div>
+                        <div class="packages__item-subtitle">конфигураций: 12</div>
+                    </div>
+                    <div class="packages__item-price">от 1232 ₽ / мес.</div>
+                </div>
+                <div class="packages__item" data-package-id="4">
+                    <div>
+                        <div class="packages__item-title">ERP</div>
+                        <div class="packages__item-subtitle">конфигураций: 10</div>
+                    </div>
+                    <div class="packages__item-price">от 1232 ₽ / мес.</div>
+                </div>
+                <div class="packages__item" data-package-id="5">
+                    <div>
+                        <div class="packages__item-title">Спец</div>
+                        <div class="packages__item-subtitle">конфигураций: 11</div>
+                    </div>
+                    <div class="packages__item-price">от 1232 ₽ / мес.</div>
+                </div>
+            </div>
+            <div class="packages__configurations" data-package-id="1">
+                <div class="packages__configurations-title">Конфигурации Пакет I:</div>
+                <ul class="packages__configurations-list">
+                    <li>1С: Бухгалтерия ПРОФ</li>
+                    <li>1С: Управление нашей фирмой</li>
+                    <li>1С: Розница</li>
+                    <li>1С: Бухгалтерия НКО ПРОФ</li>
+                    <li>1С: Бухгалтерия государственного учреждения</li>
+                </ul>
+            </div>
+            <div class="packages__configurations" data-package-id="2" style="display: none;">
+                <div class="packages__configurations-title">Конфигурации Пакет II:</div>
+                <ul class="packages__configurations-list">
+                    <li>1С: Бухгалтерия ПРОФ</li>
+                    <li>1С: Управление нашей фирмой</li>
+                    <li>1С: Розница</li>
+                    <li>1С: Бухгалтерия НКО ПРОФ</li>
+                    <li>1С: Бухгалтерия государственного учреждения</li>
+                    <li>1С: Бухгалтерия ПРОФ</li>
+                    <li>1С: Управление нашей фирмой</li>
+                    <li>1С: Розница</li>
+                    <li>1С: Бухгалтерия НКО ПРОФ</li>
+                    <li>1С: Бухгалтерия государственного учреждения</li>
+                </ul>
+            </div>
+            <div class="packages__configurations" data-package-id="3" style="display: none;">
+                <div class="packages__configurations-title">Конфигурации Пакет III:</div>
+                <ul class="packages__configurations-list">
+                    <li>1С: Бухгалтерия ПРОФ</li>
+                    <li>1С: Управление нашей фирмой</li>
+                    <li>1С: Розница</li>
+                    <li>1С: Бухгалтерия НКО ПРОФ</li>
+                    <li>1С: Бухгалтерия государственного учреждения</li>
+                    <li>1С: Бухгалтерия ПРОФ</li>
+                    <li>1С: Управление нашей фирмой</li>
+                    <li>1С: Розница</li>
+                    <li>1С: Бухгалтерия НКО ПРОФ</li>
+                    <li>1С: Бухгалтерия государственного учреждения</li>
+                    <li>1С: Бухгалтерия ПРОФ</li>
+                    <li>1С: Управление нашей фирмой</li>
+                    <li>1С: Розница</li>
+                    <li>1С: Бухгалтерия НКО ПРОФ</li>
+                    <li>1С: Бухгалтерия государственного учреждения</li>
+                    <li>1С: Бухгалтерия ПРОФ</li>
+                    <li>1С: Управление нашей фирмой</li>
+                    <li>1С: Розница</li>
+                    <li>1С: Бухгалтерия НКО ПРОФ</li>
+                    <li>1С: Бухгалтерия государственного учреждения</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 
 <script>
@@ -418,6 +566,7 @@
     function addRemoveConfigurationEvent() {
         $(".calculator__remove-configuration").click(function() {
             $(this).parents(".calculator__configuration").remove()
+            calculations()
         })
     }
     addRemoveConfigurationEvent()
@@ -465,8 +614,10 @@
     })
 
 
+    // Open & Close
     $(".js-open-configurations").click(function() {
-        $(".configurations").show()
+        let calculatorTab = $(this).parents("[data-calculator-tab]").attr("data-calculator-tab")
+        $(`.configurations[data-calculator-tab=${calculatorTab}]`).show()
         $("body, html").addClass("lock")
     })
     $(".js-configurations-close").click(function() {
@@ -475,7 +626,8 @@
     })
     
     $(".js-packages-open").click(function() {
-        $(".packages").show()
+        let calculatorTab = $(this).parents("[data-calculator-tab]").attr("data-calculator-tab")
+        $(`.packages[data-calculator-tab=${calculatorTab}]`).show()
         $("body, html").addClass("lock")
     })
     $(".js-packages-close").click(function() {
@@ -483,42 +635,70 @@
         $("body, html").removeClass("lock")
     })
 
-    $(".js-select-configurations").click(function() {
-        let checkedInputs = []
-        $(".configurations__configuration").each(function(i, el) {
-            let input = $(this).find("input[type='checkbox']")[0],
-                title = $(this).find("span")
-
-            if (input.checked) {
-                checkedInputs.push([$(input).attr("name"), title.text()])
+    // Configurations
+    function showConfigurations() {
+        $(".configurations").each(function(index, elem) {
+            let calculatorTab = $(elem).attr("data-calculator-tab")
+            let checkedInputs = []
+            $(elem).find(".configurations__configuration").each(function(i, el) {
+                let input = $(el).find("input[type='checkbox']")[0],
+                    title = $(el).find("span")
+    
+                if (input.checked) {
+                    checkedInputs.push([$(input).attr("name"), title.text(), Number($(el).attr("data-package"))])
+                }
+            })
+    
+            $(`.calculator__tab[data-calculator-tab=${calculatorTab}] .calculator__configuration`).remove()
+            let package = 1
+            for (let configuration of checkedInputs) {
+                configuration[2] > package ? package = configuration[2] : null
+                $(`.calculator__tab[data-calculator-tab=${calculatorTab}] .calculator__configurations`).append(
+                    `
+                    <div class="calculator__configuration" data-name='${configuration[0]}'>
+                        ${configuration[1]}
+                        <svg class="calculator__remove-configuration" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4351 1.4644L9.02089 0.0501823L5.48535 3.58572L1.94982 0.0501819L0.535604 1.4644L4.07114 4.99993L0.535604 8.53546L1.94982 9.94968L5.48535 6.41414L9.02089 9.94968L10.4351 8.53546L6.89957 4.99993L10.4351 1.4644Z" fill="#BFC5CA"></path>
+                        </svg>                                    
+                    </div>
+                    `
+                )
             }
+            addRemoveConfigurationEvent()
+            
+            $(`.packages[data-calculator-tab=${calculatorTab}] .packages__item`).removeClass("packages__item_active").removeClass("packages__item_selected")
+            $(`.packages[data-calculator-tab=${calculatorTab}] .packages__item[data-package-id=${package}]`).addClass("packages__item_active").addClass("packages__item_selected")
+            $(`.packages[data-calculator-tab=${calculatorTab}] .packages__configurations`).hide()
+            $(`.packages[data-calculator-tab=${calculatorTab}] .packages__configurations[data-package-id=${package}]`).show()
         })
+    }
 
-        $(".calculator__configurations .calculator__configuration").remove()
-        for (let configuration of checkedInputs) {
-            $(".calculator__configurations").append(
-                `
-                <div class="calculator__configuration" data-name='${configuration[0]}'>
-                    ${configuration[1]}
-                    <svg class="calculator__remove-configuration" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4351 1.4644L9.02089 0.0501823L5.48535 3.58572L1.94982 0.0501819L0.535604 1.4644L4.07114 4.99993L0.535604 8.53546L1.94982 9.94968L5.48535 6.41414L9.02089 9.94968L10.4351 8.53546L6.89957 4.99993L10.4351 1.4644Z" fill="#BFC5CA"></path>
-                    </svg>                                    
-                </div>
-                `
-            )
-        }
-        addRemoveConfigurationEvent()
+    $(".js-select-configurations").click(function() {
+        showConfigurations()
+        calculations()
     })
+    showConfigurations()
 
     $(".packages__item").click(function() {
         if ($(this).hasClass("packages__item_selected")) { return }
         
-        let packageid = $(this).attr("data-package-id")
+        let packageid = $(this).attr("data-package-id"),
+            parent = $(this).parents(".packages")
 
-        $(".packages__item").removeClass("packages__item_selected")
+        parent.find(".packages__item").removeClass("packages__item_selected")
         $(this).addClass("packages__item_selected")
 
-        $(".packages__configurations").hide()
-        $(`.packages__configurations[data-package-id=${packageid}]`).show()
+        parent.find(".packages__configurations").hide()
+        parent.find(`.packages__configurations[data-package-id=${packageid}]`).show()
     })
+
+    function calculations() {
+        $(".calculator__configurations .hint").remove()
+        $(".calculator__tab").each(function(i, el) {
+            if ($(el).find(".calculator__configurations .calculator__configuration").length == 0) {
+                $(el).find(".calculator__configurations").append("<span class='hint'>Выберите минимум 1 конфигурацию</span>")
+            }
+        })
+    }
+    calculations()
 </script>

@@ -103,6 +103,11 @@
         align-items: center;
         gap: 16px;
         flex-wrap: wrap;
+
+        .hint {
+            @include font14;
+            color: $colorTextLight;
+        }
     }
 
     // .calculator__add-configuration

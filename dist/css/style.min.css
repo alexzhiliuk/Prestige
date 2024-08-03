@@ -1370,6 +1370,12 @@ input[type=checkbox]:checked::after {
   gap: 16px;
   flex-wrap: wrap;
 }
+.calculator__configurations .hint {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 14px;
+  color: #808B96;
+}
 .calculator__add-configuration {
   height: 40px;
   aspect-ratio: 1;
