@@ -565,7 +565,16 @@
 
     function addRemoveConfigurationEvent() {
         $(".calculator__remove-configuration").click(function() {
+            let name = $(this).parents(".calculator__configuration").attr("data-name"),
+                calculatorTab = $(this).parents("[data-calculator-tab]").attr('data-calculator-tab')
+
             $(this).parents(".calculator__configuration").remove()
+            let input = $(`.configurations[data-calculator-tab=${calculatorTab}] input[name=${name}]`)[0]
+            if (input) {
+                input.checked = false
+            }
+            
+            identifyPackage()
             calculations()
         })
     }
@@ -636,6 +645,27 @@
     })
 
     // Configurations
+    function identifyPackage() {
+        $(".configurations").each(function(index, elem) {
+            let package = 1
+            let calculatorTab = $(elem).attr("data-calculator-tab")
+
+            $(elem).find(".configurations__configuration").each(function(i, el) {
+                let input = $(el).find("input[type='checkbox']")[0],
+                    title = $(el).find("span")
+                    currentPackage = Number($(el).attr("data-package")) 
+    
+                if (input.checked) {
+                    currentPackage > package ? package = currentPackage : null
+                }
+            })
+
+            $(`.packages[data-calculator-tab=${calculatorTab}] .packages__item`).removeClass("packages__item_active").removeClass("packages__item_selected")
+            $(`.packages[data-calculator-tab=${calculatorTab}] .packages__item[data-package-id=${package}]`).addClass("packages__item_active").addClass("packages__item_selected")
+            $(`.packages[data-calculator-tab=${calculatorTab}] .packages__configurations`).hide()
+            $(`.packages[data-calculator-tab=${calculatorTab}] .packages__configurations[data-package-id=${package}]`).show()
+        })
+    }
     function showConfigurations() {
         $(".configurations").each(function(index, elem) {
             let calculatorTab = $(elem).attr("data-calculator-tab")
@@ -645,14 +675,13 @@
                     title = $(el).find("span")
     
                 if (input.checked) {
-                    checkedInputs.push([$(input).attr("name"), title.text(), Number($(el).attr("data-package"))])
+                    checkedInputs.push([$(input).attr("name"), title.text()])
                 }
             })
     
             $(`.calculator__tab[data-calculator-tab=${calculatorTab}] .calculator__configuration`).remove()
-            let package = 1
+
             for (let configuration of checkedInputs) {
-                configuration[2] > package ? package = configuration[2] : null
                 $(`.calculator__tab[data-calculator-tab=${calculatorTab}] .calculator__configurations`).append(
                     `
                     <div class="calculator__configuration" data-name='${configuration[0]}'>
@@ -665,11 +694,7 @@
                 )
             }
             addRemoveConfigurationEvent()
-            
-            $(`.packages[data-calculator-tab=${calculatorTab}] .packages__item`).removeClass("packages__item_active").removeClass("packages__item_selected")
-            $(`.packages[data-calculator-tab=${calculatorTab}] .packages__item[data-package-id=${package}]`).addClass("packages__item_active").addClass("packages__item_selected")
-            $(`.packages[data-calculator-tab=${calculatorTab}] .packages__configurations`).hide()
-            $(`.packages[data-calculator-tab=${calculatorTab}] .packages__configurations[data-package-id=${package}]`).show()
+            identifyPackage()
         })
     }
 
