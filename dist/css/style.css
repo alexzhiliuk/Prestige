@@ -2019,6 +2019,90 @@ input[type=checkbox]:checked::after {
   font-size: 16px;
 }
 
+.form {
+  background: #FFFFFF;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+@media screen and (max-width: 991.98px) {
+  .form {
+    padding: 32px 16px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .form {
+    padding: 16px;
+    gap: 24px;
+  }
+}
+.form__header {
+  display: flex;
+  flex-direction: column;
+}
+.form__title {
+  font-weight: 600;
+  font-size: clamp(20px, 3.2vw, 32px);
+}
+.form__subtitle {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: clamp(18px, 2.4vw, 24px);
+  line-height: 1.4;
+  margin-top: 4px;
+}
+@media screen and (max-width: 767.98px) {
+  .form__subtitle {
+    font-size: 16px;
+    line-height: 1.35;
+  }
+}
+.form__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.form__row {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.form__row > * {
+  flex: 1;
+  min-width: min(300px, 100%);
+}
+.form__input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.form__label {
+  font-size: 12px;
+  color: #808B96;
+  text-transform: uppercase;
+}
+.form__input {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: clamp(18px, 2vw, 20px);
+  padding: 8px 0;
+  border-bottom: 1px solid #E0E0E0;
+}
+.form__input::placeholder {
+  color: #D9DCE0;
+}
+.form__input:not(:placeholder-shown) {
+  border-color: #808B96;
+}
+.form__input:focus-within {
+  border-color: #0273DF;
+}
+.form__hint {
+  font-size: 12px;
+}
+
 .who__box {
   max-width: 948px;
   width: 100%;
