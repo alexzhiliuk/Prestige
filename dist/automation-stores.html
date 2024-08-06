@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicons -->
+     
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <title>Автоматизация розничных магазинов</title>
+</head>
+    <body>
+
+        <!-- Header -->
+        <header class="header">
+    <div class="header__inner container">
+        <a href="index.html" class="header__logo">
+            <img src="img/header/logo.svg" alt="">
+        </a>
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li>
+                    <a href="#" class="header__link header__link_droplist header__link_active" data-drop-id="1">Услуги</a>
+                </li>
+                <li>
+                    <a href="#" class="header__link">О компании</a>
+                </li>
+                <li>
+                    <a href="#" class="header__link">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__contacts">
+            <a href="tel:+79991234567" class="header__phone">+7 (999) 123-45-67</a>
+            <div class="header__socials">
+                <a href="#">
+                    <img src="img/socials/tg.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="img/socials/whts.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="header__burger">
+            <span></span>
+        </div>
+    </div>
+    <div class="header__dropmenu dropmenu" data-drop-id="1">
+        <div class="dropmenu__header container js-back-mobile-menu">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 1L2 9M2 9L10 17M2 9H18" stroke="#00172D" stroke-width="2"/>
+            </svg>                
+            Услуги
+        </div>
+        <div class="dropmenu__inner container">
+            <div class="dropmenu__item">
+                <div class="dropmenu__title">Сервисы</div>
+                <ul class="dropmenu__list">
+                    <li>
+                        <a href="#">Аренда 1C</a>
+                    </li>
+                    <li>
+                        <a href="#">Аренда сервера 1С</a>
+                    </li>
+                    <li>
+                        <a href="#">Аренда виртуального сервера</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dropmenu__item">
+                <div class="dropmenu__title">IT услуги</div>
+                <ul class="dropmenu__list">
+                    <li>
+                        <a href="#">Обслуживание кассового оборудования </a>
+                    </li>
+                    <li>
+                        <a href="#">1С сопровождение </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dropmenu__item">
+                <div class="dropmenu__title"> IT консалтинг</div>
+                <ul class="dropmenu__list">
+                    <li>
+                        <a href="#">Автоматизация производства</a>
+                    </li>
+                    <li>
+                        <a href="#">Автоматизация оптовых продаж</a>
+                    </li>
+                    <li>
+                        <a href="#">Автоматизация розничных продаж </a>
+                    </li>
+                    <li>
+                        <a href="#">Автоматизация склада</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header__mobile-menu mobile-menu container">
+        <nav class="mobile-menu__nav">
+            <ul class="mobile-menu__list">
+                <li>
+                    <a href="#" data-drop-id="1">Услуги</a>
+                </li>
+                <li>
+                    <a href="#">О компании</a>
+                </li>
+                <li>
+                    <a href="#">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="mobile-menu__contacts">
+            <a href="tel:+79991234567" class="mobile-menu__phone">+7 (999) 123-45-67</a>
+            <div class="mobile-menu__socials">
+                <a href="#">
+                    <img src="img/socials/tg.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="img/socials/whts.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <main>
+
+            <!-- Hero -->
+            <section class="hero  container">
+    
+    <h1 class="hero__title title h1">
+        <span>Автоматизация</span> розничной торговли 1С
+    </h1>
+    <p class="hero__text">
+         IT Prestige - вы ставите задачу, мы подбираем решение!
+    </p>
+    <a href="#" class="btn hero__btn">узнать больше</a>
+    
+</section>
+            
+            <!-- Box -->
+            <section class="section container">
+    <div class="box section__box">
+        <div class="box__left"></div>
+        <div class="box__right"></div>
+
+        Автоматизация бизнес процесса продажи - наша специализация. С помощью набора решений и опыта наших специалистов, мы поможем вам оптимизировать работу любого магазина  и минимизировать затраты на обслуживание. Доверьте нам бизнес-задачи и получите максимальный результат!
+    </div>
+    <a href="#" class="btn mt-32 center">Заказать консультацию</a>
+</section>
+            
+            <!-- Text -->
+            <section class="section container">
+    <div class="text">
+        <h4>Кому подходит автоматизация системы продаж:</h4>
+        <p>Программное обеспечение может использоваться различными предприятиями, занимающимися розничной торговлей, включая:</p>
+        <ul>
+            <li>розничные торговые точки, такие как магазины, супермаркеты и минимаркеты;</li>
+            <li>автономные магазины, расположенные вдали от крупных торговых центров;</li>
+            <li>торговую сеть, состоящую из нескольких магазинов или филиалов.</li>
+        </ul>
+        <p>
+            Автоматизация продаж организации позволяет автоматизировать учет движения денежных средств и товаров, что упрощает процесс отслеживания остатков, предотвращает возможные ошибки и облегчает процесс инвентаризации. Кроме того, ПО позволяет создавать различные отчеты, которые могут быть использованы для анализа эффективности работы магазина, контроля над движением товаров и управления персоналом.
+        </p>
+    </div>
+    <a href="#" class="btn mt-32">Узнать больше</a>
+</section>
+
+<section class="section container">
+    <div class="text">
+        <h4>Что мы предлагаем?</h4>
+        <p>При выборе CRM-системы необходимо учитывать текущие задачи, число пользователей, сложность бизнес-процессов, особенности работы с клиентами и аналитические возможности системы. Все это повлияет на стоимость внедрения.</p>
+        <p>
+            <span>Вы можете выбрать из комплекса услуг IT Prestige. Делаем быстро и “под ключ”:</span>
+        </p>
+        <p>
+            Специалисты из IT Prestige разработали и адаптируют под вас программные комплексы:
+        </p>
+
+        <p>
+            <strong>Программы:</strong>
+        </p>
+        <ul>
+            <li>Внедрение автоматизированного рабочего места кассира</li>
+            <li>Интеграция с системами маркировки ЕГАИС, Честный знак, Меркурий</li>
+            <li>Интеграция с системой регламентированного учета 1С бухгалтерия</li>
+            <li>Внедрение или интеграция с товароучетной системой предприятия</li>
+            <li>Инвентаризация торговой точки и ее автоматизация с применением ТСД</li>
+        </ul>
+        <p>
+            <strong>Оборудование:</strong>
+        </p>
+        <ul>
+            <li>Подключение контрольно-кассовой техники в соответствии с 54 ФЗ</li>
+            <li>Внедрение системы видеонаблюдения и мониторинга за кассовыми операциями для фиксации и выявления хищения денежных средств кассиром-операционистом</li>
+            <li>Внедрение системы штрихкодирования</li>
+            <li>Монтаж и настройка противокражных систем</li>
+            <li>Видеонаблюдение для выявления фактов воровства в торговом зале и в прикассовой зоне</li>
+        </ul>
+
+        <p>
+            <strong>Кому будет полезно:</strong>
+        </p>
+        <ul>
+            <li>Собственникам, товароведам, администраторам, кассирам</li>
+            <li>Для продуктовой и непродуктовой розничной торговли.</li>
+        </ul>
+
+        <h4>Почему мы?</h4>
+        <p>
+            При выборе CRM-системы необходимо учитывать текущие задачи, число пользователей, сложность бизнес-процессов, особенности работы с клиентами и аналитические возможности системы. Все это повлияет на стоимость внедрения.
+        </p>
+    </div>
+    <a href="#" class="btn mt-32">Получить консультацию</a>
+</section>
+            
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+    <div class="footer__inner container">
+        <div class="footer__top footer-menu">
+            
+
+                <div class="footer-menu__item">
+                    <div class="footer-menu__title">Сервисы</div>
+                    <ul class="footer-menu__list">
+                        <li>
+                            <a href="#">Аренда 1C</a>
+                        </li>
+                        <li>
+                            <a href="#">Аренда сервера 1С</a>
+                        </li>
+                        <li>
+                            <a href="#">Аренда виртуального сервера</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-menu__item">
+                    <div class="footer-menu__title">IT услуги</div>
+                    <ul class="footer-menu__list">
+                        <li>
+                            <a href="#">Обслуживание кассового оборудования </a>
+                        </li>
+                        <li>
+                            <a href="#">1С сопровождение </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-menu__item">
+                    <div class="footer-menu__title"> IT консалтинг</div>
+                    <ul class="footer-menu__list">
+                        <li>
+                            <a href="#">Автоматизация производства</a>
+                        </li>
+                        <li>
+                            <a href="#">Автоматизация оптовых продаж</a>
+                        </li>
+                        <li>
+                            <a href="#">Автоматизация розничных продаж </a>
+                        </li>
+                        <li>
+                            <a href="#">Автоматизация склада</a>
+                        </li>
+                    </ul>
+                </div>
+
+            
+        </div>
+        <div class="footer__bottom">
+            <a href="index.html" class="footer__logo">
+                <img src="img/footer/logo.svg" alt="">
+            </a>
+            <div class="footer__copy">
+                © 2023. Все права защищены. Перепечатка и любое использование материалов возможно только при наличии ссылки на первоисточник.
+            </div>
+            <div class="footer__contacts">
+                <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+                <a href="mailto:info@Itp24.ru">info@Itp24.ru</a>
+                <div class="footer__socials">
+                    <a href="#">
+                        <img src="img/socials/tg-white.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/socials/whts-white.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

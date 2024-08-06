@@ -8,18 +8,26 @@
     @include font20;
     
 
-    li {
-        display: flex;
-        gap: 8px;
+    & > li {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        column-gap: 8px;
+        row-gap: 16px;
 
         &::before {
             content: '';
+            display: inline-block;
             margin-top: .4375em;
             width: .5em;
             height: .5em;
             flex-shrink: 0;
             border-radius: 50%;
             background: $colorPrimary;
+        }
+
+        & > ol, ul {
+            grid-column: 1 / 3;
+            padding-left: 20px;
         }
     }
 }
@@ -34,14 +42,24 @@
 
     @include font20;
 
-    li {
-        display: flex;
-        gap: 8px;
+    & > li {
+
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        column-gap: 8px;
+        row-gap: 16px;
+        
+
         &::before {
             content: counter(item) ". ";
             counter-increment: item;
             color: $colorPrimary;
-            font-weight: 700;
+            font-weight: 700;          
+        }
+
+        & > ol, ul {
+            grid-column: 1 / 3;
+            padding-left: 20px;
         }
     }
 }

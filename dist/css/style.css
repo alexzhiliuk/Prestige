@@ -544,6 +544,23 @@ input[type=checkbox]:checked::after {
   translate: -50% -50%;
 }
 
+.mt-64 {
+  margin-top: clamp(32px, 6vw, 64px);
+}
+
+.mt-32 {
+  margin-top: clamp(16px, 3vw, 32px);
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+b, strong {
+  font-weight: 600;
+}
+
 .btn {
   font-family: "Open Sans";
   font-weight: 400;
@@ -563,6 +580,13 @@ input[type=checkbox]:checked::after {
   background: #FFFFFF;
   color: #00172D;
   border: 1px solid #00172D;
+}
+@media screen and (max-width: 575.98px) {
+  .btn {
+    max-width: 100%;
+    width: 100%;
+    padding: 18px 4px;
+  }
 }
 
 .header {
@@ -968,18 +992,25 @@ input[type=checkbox]:checked::after {
   font-weight: 400;
   font-size: clamp(18px, 2vw, 20px);
 }
-.ul li, .text ul li {
-  display: flex;
-  gap: 8px;
+.ul > li, .text ul > li {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  column-gap: 8px;
+  row-gap: 16px;
 }
-.ul li::before, .text ul li::before {
+.ul > li::before, .text ul > li::before {
   content: "";
+  display: inline-block;
   margin-top: 0.4375em;
   width: 0.5em;
   height: 0.5em;
   flex-shrink: 0;
   border-radius: 50%;
   background: #0273DF;
+}
+.ul > li > ol, .text ul > li > ol, .ul > li ul, .text ul > li ul {
+  grid-column: 1/3;
+  padding-left: 20px;
 }
 
 .ol, .text ol {
@@ -992,15 +1023,21 @@ input[type=checkbox]:checked::after {
   font-weight: 400;
   font-size: clamp(18px, 2vw, 20px);
 }
-.ol li, .text ol li {
-  display: flex;
-  gap: 8px;
+.ol > li, .text ol > li {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  column-gap: 8px;
+  row-gap: 16px;
 }
-.ol li::before, .text ol li::before {
+.ol > li::before, .text ol > li::before {
   content: counter(item) ". ";
   counter-increment: item;
   color: #0273DF;
   font-weight: 700;
+}
+.ol > li > ol, .text ol > li > ol, .ol > li ul, .text ol > li ul {
+  grid-column: 1/3;
+  padding-left: 20px;
 }
 
 .text {
