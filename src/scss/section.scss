@@ -3,6 +3,8 @@
     margin-top: clamp(64px, 12vw, 128px);
     margin-bottom: clamp(64px, 12vw, 128px);
 
+    scroll-margin: 128px;
+
     // .section__header
     &__header {
     }
@@ -23,6 +25,10 @@
         &_centered {
             align-items: center;
             text-align: center;
+        }
+
+        &_mt_96 {
+            margin-top: clamp(44px, 9vw, 96px);
         }
     }
 

@@ -431,7 +431,7 @@ template {
 .h4, .text h4 {
   font-family: "Open Sans";
   font-weight: 600;
-  font-size: clamp(24px, 3vw, 30px);
+  font-size: clamp(20px, 3vw, 30px);
 }
 
 .h5, .text h5 {
@@ -551,6 +551,7 @@ input[type=checkbox]:checked::after {
   font-weight: 600;
   color: #FFFFFF;
   text-transform: uppercase;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1992,6 +1993,7 @@ input[type=checkbox]:checked::after {
 .section {
   margin-top: clamp(64px, 12vw, 128px);
   margin-bottom: clamp(64px, 12vw, 128px);
+  scroll-margin: 128px;
 }
 .section__title {
   text-align: center;
@@ -2005,6 +2007,9 @@ input[type=checkbox]:checked::after {
 .section__body_centered {
   align-items: center;
   text-align: center;
+}
+.section__body_mt_96 {
+  margin-top: clamp(44px, 9vw, 96px);
 }
 .section__box {
   font-family: "Open Sans";
@@ -2101,6 +2106,26 @@ input[type=checkbox]:checked::after {
 }
 .form__hint {
   font-size: 12px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(44px, 9vw, 96px);
+}
+@media screen and (max-width: 575.98px) {
+  .steps__btn {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+.steps__text {
+  margin-top: 16px;
+}
+@media screen and (max-width: 575.98px) {
+  .steps__text {
+    margin-top: 8px;
+  }
 }
 
 .who__box {

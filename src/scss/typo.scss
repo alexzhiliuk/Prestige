@@ -16,7 +16,7 @@
 @mixin h4 {
     font-family: $fontPrimary;
     font-weight: 600;
-    font-size: clamp(24px, 3vw, 30px);
+    font-size: clamp(20px, 3vw, 30px);
 }
 @mixin h5 {
     font-family: $fontPrimary;

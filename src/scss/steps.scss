@@ -1,0 +1,22 @@
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(44px, 9vw, 96px);
+
+    // .steps__btn
+    &__btn {
+        @media screen and (max-width: $breakpoint576) {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    // .steps__text
+    &__text {
+        margin-top: 16px;
+
+        @media screen and (max-width: $breakpoint576) {
+            margin-top: 8px;
+        }
+    }
+}
