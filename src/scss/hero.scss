@@ -1,7 +1,6 @@
 .hero {
 
     padding-top: clamp(32px, 12.8vw, 128px);
-    padding-bottom: 96px;
     position: relative;
     text-align: center;
     
@@ -91,6 +90,7 @@
     // .hero_slider
     &_slider {
         text-align: left;
+        padding-bottom: 96px;
         & > * {
             margin-top: 0;
         }

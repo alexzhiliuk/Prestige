@@ -1,0 +1,128 @@
+.cases {
+
+    width: 100%;
+
+    .swiper-slide {
+        height: auto !important;
+    }
+
+    // .cases__slider-wrapper
+    &__slider-wrapper {
+        padding: 0 20px;
+        position: relative;
+
+        @media screen and (max-width: $breakpoint768) {
+            padding: 0;
+            width: 100vw;
+            margin-left: calc(-1 * $containerPadding);
+        }
+    }
+
+    // .cases__slider
+    &__slider {
+        padding: 44px 44px !important;
+
+        @media screen and (max-width: $breakpoint768) {
+            width: 100%;
+            padding: 34px $containerPadding !important;
+        }
+    }
+
+    // .cases__nav
+    &__nav {
+        position: absolute;
+        width: 64px;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        background: $colorWhite;
+        z-index: 2;
+
+        cursor: pointer;
+
+        &_prev {
+            top: 0;
+            left: -0;
+            justify-content: flex-start;
+        }
+
+        &_next {
+            top: 0;
+            right: 0;
+            justify-content: flex-end;
+        }
+
+        @media screen and (max-width: $breakpoint768) {
+            display: none;
+        }
+    }
+
+    // .cases__slide
+    &__slide {
+        height: 100%;
+        padding: 32px;
+        border: 1px solid $colorBorder;
+        background: $colorWhite;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        text-align: center;
+
+        &:hover {
+
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+
+            .cases__title {
+                color: $colorPrimary;
+            }
+        }
+    }
+
+    // .cases__title
+    &__title {
+        min-height: 44px;
+    }
+
+    // .cases__desc
+    &__desc {
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    // .cases__btn
+    &__btn {
+        margin-top: auto;
+    }
+
+    // .cases__pagination
+    &__pagination {
+        display: none;
+
+        @media screen and (max-width: $breakpoint768) {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            margin: 0 !important;
+
+            &.swiper-pagination-bullet-active {
+                scale: 1.33;
+            }
+        }
+    }
+
+    // .cases__case
+    &__case {
+        margin-top: 64px;
+    }
+}
+
