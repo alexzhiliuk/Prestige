@@ -119,6 +119,7 @@
 
             // .hero__slide
             &__slide {
+                width: 100%;
                 min-height: 432px;
                 display: flex;
                 flex-direction: column;
@@ -183,6 +184,84 @@
         opacity: 1;
         width: unset !important;
         height: unset !important;
+    }
+
+    // .hero_img
+    &_img {
+        text-align: left;
+        padding-bottom: 96px;
+        & > * {
+            margin-top: 0;
+        }
+        .hero {
+
+            // .hero__title
+            &__title {
+                font-size: clamp(24px, 5vw, 46px);
+                line-height: 1.1;
+                font-weight: 600;
+                max-width: 80%;
+
+                span {
+                    font-weight: 700;
+                }
+            }
+
+            // .hero__text
+            &__text {
+                font-size: clamp(16px, 2.6vw, 26px);
+                line-height: 1.4;
+
+                margin-top: clamp(24px, 6.4vw, 64px);
+            }
+
+            // .hero__inner
+            &__inner {
+                width: 100%;
+                min-height: 432px;
+                display: flex;
+                flex-direction: column;
+
+                position: relative;
+
+                @media screen and (max-width: $breakpoint576) {
+                    min-height: unset;
+                }
+            }
+
+            // .hero__btn
+            &__btn {
+                margin-top: auto;
+
+                @media screen and (max-width: $breakpoint576) {
+                    margin-top: 384px;
+                }
+            }
+
+            // .hero__img
+            &__img {
+                position: absolute;
+                z-index: -1;
+                right: -180px;
+                bottom: -80px;
+
+                width: clamp(600px, 70vw, 771px);
+                aspect-ratio: 771 / 776;
+
+                @media screen and (max-width: $breakpoint576) {
+                    width: max(550px, 120vw);
+                    bottom: -90px;
+                    right: -140px;
+                }
+
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+            
+
+        }
     }
 }
 

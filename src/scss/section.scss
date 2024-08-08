@@ -16,7 +16,7 @@
 
     // .section__body
     &__body {
-        margin-top: 32px;
+        margin-top: clamp(24px, 6vw, 64px);
         
         display: flex;
         flex-direction: column;

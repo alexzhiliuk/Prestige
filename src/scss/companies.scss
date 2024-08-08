@@ -1,0 +1,21 @@
+.companies {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(24px, 6vw, 64px);
+
+    @media screen and (max-width: $breakpoint768) {
+        margin-top: 0;
+    }
+
+    // .companies__item
+    &__item {
+        height: 44px;
+
+        img {
+            height: 100%;
+            display: block;
+        }
+    }
+}
