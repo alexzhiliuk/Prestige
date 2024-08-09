@@ -10,7 +10,7 @@
             <div class="calculator__form">
                 <div class="calculator__types">
                     <div class="calculator__type calculator__type_active" data-calculator-tab="1">Аренда 1с</div>
-                    <div class="calculator__type" data-calculator-tab="2">Фреш</div>
+                    <div class="calculator__type" data-calculator-tab="2" style="display: none;">Фреш</div>
                 </div>
                 <div class="calculator__tab" data-calculator-tab="1">
                     <div class="calculator__row">
@@ -47,7 +47,7 @@
                                     <rect x="12" width="2" height="12" transform="rotate(90 12 0)" fill="white"/>
                                 </svg>                                    
                             </div>
-                            <input type="number" name="sessions" id="sessionsCount" required value="12" min="1" max="100" class="counter__input">
+                            <input type="number" name="sessions" id="sessionsCount" required value="1" min="1" max="100" class="counter__input" data-bind-child="desktopCount">
                             <div class="counter__plus">
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7 0H5V5H0V7H5V12H7V7H12V5H7V0Z" fill="white"/>
@@ -63,7 +63,7 @@
                             </div>
                         </div>
                         <div class="toggle js-toggle" data-toggle="desktopCount">
-                            <input type="radio" hidden id="remoteDesktop">
+                            <input type="radio" hidden id="remoteDesktop" data-price="590">
                         </div>
                         <div class="calculator__counter counter" data-toggle-object="desktopCount" style="display: none;">
                             <div class="counter__minus">
@@ -71,7 +71,7 @@
                                     <rect x="12" width="2" height="12" transform="rotate(90 12 0)" fill="white"/>
                                 </svg>                                    
                             </div>
-                            <input type="number" name="sessions" id="desktopCount" required value="12" min="1" max="100" class="counter__input">
+                            <input type="number" name="sessions" id="desktopCount" required value="1" min="1" max="100" class="counter__input" data-bind-parent="sessionsCount">
                             <div class="counter__plus">
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7 0H5V5H0V7H5V12H7V7H12V5H7V0Z" fill="white"/>
@@ -212,7 +212,7 @@
                     <li>Техподдержка 24/7</li>
                 </ul>
                 <div class="calculator__price">
-                    <span>30 900</span> ₽ / мес.
+                    <span class="with-discount">30 900</span> ₽ / мес.
                 </div>
                 <a href="javascript:void(0)" class="btn js-open-popup" data-popup="1">Попробовать 14 дней бесплатно</a>
             </div>
@@ -341,40 +341,40 @@
 
         <div class="packages__body">
             <div class="packages__items">
-                <div class="packages__item packages__item_active packages__item_selected" data-package-id="1">
+                <div class="packages__item packages__item_active packages__item_selected" data-package-id="1" data-package-price="1200">
                     <div>
                         <div class="packages__item-title">Пакет I</div>
                         <div class="packages__item-subtitle">конфигураций: 5</div>
                     </div>
                     <div class="packages__item-price">от 1232 ₽ / мес.</div>
                 </div>
-                <div class="packages__item" data-package-id="2">
+                <div class="packages__item" data-package-id="2" data-package-price="1300">
                     <div>
                         <div class="packages__item-title">Пакет II</div>
                         <div class="packages__item-subtitle">конфигураций: 19</div>
                     </div>
-                    <div class="packages__item-price">от 1232 ₽ / мес.</div>
+                    <div class="packages__item-price">от 1332 ₽ / мес.</div>
                 </div>
-                <div class="packages__item" data-package-id="3">
+                <div class="packages__item" data-package-id="3" data-package-price="1600">
                     <div>
                         <div class="packages__item-title">Пакет III</div>
                         <div class="packages__item-subtitle">конфигураций: 33</div>
                     </div>
-                    <div class="packages__item-price">от 1232 ₽ / мес.</div>
+                    <div class="packages__item-price">от 1632 ₽ / мес.</div>
                 </div>
-                <div class="packages__item" data-package-id="4">
+                <div class="packages__item" data-package-id="4" data-package-price="1800">
                     <div>
                         <div class="packages__item-title">Пакет IV</div>
                         <div class="packages__item-subtitle">конфигураций: 39</div>
                     </div>
-                    <div class="packages__item-price">от 1232 ₽ / мес.</div>
+                    <div class="packages__item-price">от 1832 ₽ / мес.</div>
                 </div>
-                <div class="packages__item" data-package-id="5">
+                <div class="packages__item" data-package-id="5" data-package-price="2900">
                     <div>
                         <div class="packages__item-title">Пакет V</div>
                         <div class="packages__item-subtitle">конфигураций: 47</div>
                     </div>
-                    <div class="packages__item-price">от 1232 ₽ / мес.</div>
+                    <div class="packages__item-price">от 2892 ₽ / мес.</div>
                 </div>
             </div>
             <div class="packages__configurations" data-package-id="1">
@@ -536,194 +536,3 @@
         </div>
     </div>
 </section>
-
-
-
-<script>
-
-    $(".calculator__type").click(function() {
-        if ($(this).hasClass("calculator__type_active")) { return }
-        
-        let calculatorTab = $(this).attr("data-calculator-tab")
-
-        $(".calculator__type").removeClass("calculator__type_active")
-        $(this).addClass("calculator__type_active")
-
-        $(".calculator__tab").hide()
-        $(`.calculator__tab[data-calculator-tab=${calculatorTab}]`).show()
-        
-        $(".calculator__services").hide()
-        $(`.calculator__services[data-calculator-tab=${calculatorTab}]`).show()
-    })
-
-    $(".calculator__period").each(function(i, el) {
-        let discount = $(el).attr("data-discount") 
-        if (discount > 0) {
-            $(el).append(`<br>${discount}% скидка`)
-        }
-    })
-
-    function addRemoveConfigurationEvent() {
-        $(".calculator__remove-configuration").click(function() {
-            let name = $(this).parents(".calculator__configuration").attr("data-name"),
-                calculatorTab = $(this).parents("[data-calculator-tab]").attr('data-calculator-tab')
-
-            $(this).parents(".calculator__configuration").remove()
-            let input = $(`.configurations[data-calculator-tab=${calculatorTab}] input[name=${name}]`)[0]
-            if (input) {
-                input.checked = false
-            }
-            
-            identifyPackage()
-            calculations()
-        })
-    }
-    addRemoveConfigurationEvent()
-
-    $(".toggle").click(function() {
-        $(this).toggleClass("toggle_active")
-        let input = $(this).find("input[type='radio']")[0]
-        
-        input.checked ? input.checked = false : input.checked = true   
-
-    })
-    
-    $(".js-toggle").click(function() {
-
-        let input = $(this).find("input[type='radio']")[0]
-        
-        if (input.checked) {
-            $(`[data-toggle-object=${$(this).attr("data-toggle")}]`).show()
-        } else {
-            $(`[data-toggle-object=${$(this).attr("data-toggle")}]`).hide()
-        }
-    })
-
-    $(".calculator__period").click(function() {
-        if ($(this).hasClass("calculator__period_active")) { return }
-
-        $(".calculator__period").removeClass("calculator__period_active")
-        $(this).addClass("calculator__period_active")
-    })
-
-    $(".configurations__search input").on("input", function() {
-        $(".configurations__configuration").show()
-        let query = $(this).val()
-        if (!query) {
-            return
-        }
-        
-        $(".configurations__configuration").each(function(i, el) {
-            let title = $(el).find("span").text().toLowerCase()
-            if (!title.includes(query.toLowerCase())) {
-                $(el).hide()
-            }
-        })
-
-    })
-
-
-    // Open & Close
-    $(".js-open-configurations").click(function() {
-        let calculatorTab = $(this).parents("[data-calculator-tab]").attr("data-calculator-tab")
-        $(`.configurations[data-calculator-tab=${calculatorTab}]`).show()
-        $("body, html").addClass("lock")
-    })
-    $(".js-configurations-close").click(function() {
-        $(this).parents(".configurations").hide()
-        $("body, html").removeClass("lock")
-    })
-    
-    $(".js-packages-open").click(function() {
-        let calculatorTab = $(this).parents("[data-calculator-tab]").attr("data-calculator-tab")
-        $(`.packages[data-calculator-tab=${calculatorTab}]`).show()
-        $("body, html").addClass("lock")
-    })
-    $(".js-packages-close").click(function() {
-        $(this).parents(".packages").hide()
-        $("body, html").removeClass("lock")
-    })
-
-    // Configurations
-    function identifyPackage() {
-        $(".configurations").each(function(index, elem) {
-            let package = 1
-            let calculatorTab = $(elem).attr("data-calculator-tab")
-
-            $(elem).find(".configurations__configuration").each(function(i, el) {
-                let input = $(el).find("input[type='checkbox']")[0],
-                    title = $(el).find("span")
-                    currentPackage = Number($(el).attr("data-package")) 
-    
-                if (input.checked) {
-                    currentPackage > package ? package = currentPackage : null
-                }
-            })
-
-            $(`.packages[data-calculator-tab=${calculatorTab}] .packages__item`).removeClass("packages__item_active").removeClass("packages__item_selected")
-            $(`.packages[data-calculator-tab=${calculatorTab}] .packages__item[data-package-id=${package}]`).addClass("packages__item_active").addClass("packages__item_selected")
-            $(`.packages[data-calculator-tab=${calculatorTab}] .packages__configurations`).hide()
-            $(`.packages[data-calculator-tab=${calculatorTab}] .packages__configurations[data-package-id=${package}]`).show()
-        })
-    }
-    function showConfigurations() {
-        $(".configurations").each(function(index, elem) {
-            let calculatorTab = $(elem).attr("data-calculator-tab")
-            let checkedInputs = []
-            $(elem).find(".configurations__configuration").each(function(i, el) {
-                let input = $(el).find("input[type='checkbox']")[0],
-                    title = $(el).find("span")
-    
-                if (input.checked) {
-                    checkedInputs.push([$(input).attr("name"), title.text()])
-                }
-            })
-    
-            $(`.calculator__tab[data-calculator-tab=${calculatorTab}] .calculator__configuration`).remove()
-
-            for (let configuration of checkedInputs) {
-                $(`.calculator__tab[data-calculator-tab=${calculatorTab}] .calculator__configurations`).append(
-                    `
-                    <div class="calculator__configuration" data-name='${configuration[0]}'>
-                        ${configuration[1]}
-                        <svg class="calculator__remove-configuration" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4351 1.4644L9.02089 0.0501823L5.48535 3.58572L1.94982 0.0501819L0.535604 1.4644L4.07114 4.99993L0.535604 8.53546L1.94982 9.94968L5.48535 6.41414L9.02089 9.94968L10.4351 8.53546L6.89957 4.99993L10.4351 1.4644Z" fill="#BFC5CA"></path>
-                        </svg>                                    
-                    </div>
-                    `
-                )
-            }
-            addRemoveConfigurationEvent()
-            identifyPackage()
-        })
-    }
-
-    $(".js-select-configurations").click(function() {
-        showConfigurations()
-        calculations()
-    })
-    showConfigurations()
-
-    $(".packages__item").click(function() {
-        if ($(this).hasClass("packages__item_selected")) { return }
-        
-        let packageid = $(this).attr("data-package-id"),
-            parent = $(this).parents(".packages")
-
-        parent.find(".packages__item").removeClass("packages__item_selected")
-        $(this).addClass("packages__item_selected")
-
-        parent.find(".packages__configurations").hide()
-        parent.find(`.packages__configurations[data-package-id=${packageid}]`).show()
-    })
-
-    function calculations() {
-        $(".calculator__configurations .hint").remove()
-        $(".calculator__tab").each(function(i, el) {
-            if ($(el).find(".calculator__configurations .calculator__configuration").length == 0) {
-                $(el).find(".calculator__configurations").append("<span class='hint'>Выберите минимум 1 конфигурацию</span>")
-            }
-        })
-    }
-    calculations()
-</script>

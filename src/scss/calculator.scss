@@ -245,6 +245,11 @@
         font-size: clamp(24px, 3.2vw, 32px);
         line-height: 1.35;
         font-weight: 600;
+
+        .default {
+            color: $colorTextSuperLight;
+            text-decoration: line-through;
+        }
     }
 
     // .calculator__view-all
