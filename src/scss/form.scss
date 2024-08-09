@@ -96,4 +96,13 @@
     &__hint {
         font-size: 12px;
     }
+
+    &_centered {
+        text-align: center;
+
+        .form__submit {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 }

@@ -2078,6 +2078,40 @@ b, strong {
   color: #808B96;
 }
 
+.popup {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 64px 16px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12.5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.popup__close {
+  position: fixed;
+  top: 32px;
+  right: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #E0E0E0;
+}
+.popup__inner {
+  margin-top: auto;
+  margin-bottom: auto;
+  min-width: min(600px, 100%);
+}
+
 .hero {
   padding-top: clamp(32px, 12.8vw, 128px);
   position: relative;
@@ -2411,6 +2445,13 @@ b, strong {
 }
 .form__hint {
   font-size: 12px;
+}
+.form_centered {
+  text-align: center;
+}
+.form_centered .form__submit {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .steps {

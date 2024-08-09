@@ -143,6 +143,42 @@
         </div>
     </div>
 </header>
+        
+        <!-- Popup -->
+        <section class="popup" data-popup="1" style="display: none;">
+    <div class="popup__close">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.63589 0.221802L0.22168 1.63602L6.58585 8.00018L0.222017 14.364L1.63623 15.7782L8.00006 9.4144L14.3638 15.7782L15.778 14.3639L9.41427 8.00018L15.7784 1.63609L14.3642 0.221879L8.00006 6.58597L1.63589 0.221802Z" fill="#00172D"/>
+        </svg>            
+    </div>
+    
+        
+    <form class="popup__inner form form_centered">
+        <div class="form__header">
+            <h2 class="form__title title"><span>Есть вопросы?</span></h2>
+            <p class="form__subtitle">Закажите звонок специалиста</p>
+        </div>
+        <div class="form__inputs">
+            <div class="form__row">
+                <div class="form__input-wrapper">
+                    <input class="form__input" type="text" id="fio" required name="fio" placeholder="Ваше имя">
+                </div>
+            </div>
+            <div class="form__row">
+                <div class="form__input-wrapper">
+                    <input class="form__input" type="tel" inputmode="tel" id="tel" required name="tel" placeholder="+7 (___) ___-__-__" data-tel-input>
+                </div>
+            </div>
+            <div class="form__row">
+                <div class="form__input-wrapper">
+                    <input class="form__input" type="email" id="email" required name="email" placeholder="Email">
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn form__submit">отправить</button>
+    </form>
+
+</section>
 
         <main class="bg">
 
@@ -461,7 +497,7 @@
                 <div class="calculator__price">
                     <span>30 900</span> ₽ / мес.
                 </div>
-                <a href="#" class="btn">Попробовать 14 дней бесплатно</a>
+                <a href="javascript:void(0)" class="btn js-open-popup" data-popup="1">Попробовать 14 дней бесплатно</a>
             </div>
         </div>
 
