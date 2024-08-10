@@ -14,11 +14,30 @@
     background: $colorPrimary;
     max-width: max-content;
 
+    &:hover {
+        background: darken($color: $colorPrimary, $amount: 10);
+        border-color: darken($color: $colorPrimary, $amount: 10);
+        color: $colorWhite;
+    }
+
     &_black {
         background: $colorWhite;
         color: $colorTextDefault;
         border: 1px solid $colorTextDefault;
+
+        &:hover {
+            background: $colorPrimary;
+            border-color: $colorPrimary;
+            color: $colorWhite;
+        }
     }
+
+    &:active {
+        background: $colorTextDefault;
+        border-color: $colorTextDefault;
+        color: $colorWhite;
+    }
+
 
     @media screen and (max-width: $breakpoint576) {
         max-width: 100%;

@@ -125,6 +125,10 @@
         @include font14;
         font-weight: 600;
         color: $colorTextDefault;
+
+        &:hover {
+            color: $colorPrimary;
+        }
     }
 
     // .header__socials
@@ -133,10 +137,19 @@
         align-items: center;
         gap: 16px;
 
-        img {
+        img, svg {
             width: 16px;
             height: auto;
             display: block;
+
+            &:hover {
+                path[fill] {
+                    fill: $colorPrimary;
+                }
+                path[stroke] {
+                    stroke: $colorPrimary;
+                }
+            }
         }
     }
 
@@ -309,6 +322,10 @@
             font-weight: 400;
             color: $colorTextDefault;
             line-height: 1.1;
+
+            &:hover {
+                color: $colorPrimary;
+            }
         }
     }
 }

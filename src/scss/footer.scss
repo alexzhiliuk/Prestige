@@ -59,6 +59,10 @@
                 padding-right: 0;
                 border-right: none
             }
+
+            &:hover {
+                color: $colorTextSuperLight;
+            }
         }
     }
 
@@ -66,6 +70,17 @@
     &__socials {
         @extend .header__socials;
         row-gap: 24px;
+
+        svg {
+            &:hover {
+                path[fill] {
+                    fill: $colorTextSuperLight;
+                }
+                path[stroke] {
+                    stroke: $colorTextSuperLight;
+                }
+            }
+        }
     }
 }
 
@@ -97,6 +112,10 @@
 
         a {
             color: $colorWhite;
+
+            &:hover {
+                color: $colorTextSuperLight;
+            }
         }
         
     }
